@@ -11,6 +11,7 @@ public class HelloFX extends Application {
 
     @Override
     public void start(Stage stage) {
+    	stage.setTitle("Blue Marble");
         String javaVersion = System.getProperty("java.version");
         String javafxVersion = System.getProperty("javafx.version");
         Label helloLabel = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
