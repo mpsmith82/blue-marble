@@ -1,16 +1,6 @@
 package hellofx;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.InputStream;
-import java.net.URL;
-import java.nio.file.Paths;
-
-import javax.imageio.ImageIO;
-
-import org.apache.commons.io.IOUtils;
 import org.curiousworks.BlueMarble;
-import org.json.JSONObject;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -38,8 +28,8 @@ public class BlueMarbleController {
 	@FXML
 	private CheckBox blackAndWhite;
 
-	//-----------------------------------------------------
-	
+	// -----------------------------------------------------
+
 	@FXML
 	void updateDate(ActionEvent event) {
 
@@ -52,11 +42,8 @@ public class BlueMarbleController {
 			blueMarble.setDate(datePicker.getValue().getYear() + "-0" + datePicker.getValue().getMonthValue() + "-"
 					+ datePicker.getValue().getDayOfMonth());
 
-			// blueMarble.setDate("2018-0" + datePicker.getValue().getMonthValue() + "-" +
-			// datePicker.getValue().getDayOfMonth());
+			// ---------------------------------------------
 
-			//---------------------------------------------
-			
 			if (datePicker.getValue().getYear() >= 2018 && datePicker.getValue().getMonthValue() >= 6) {
 
 				enhancedImage.setDisable(true);
@@ -69,16 +56,14 @@ public class BlueMarbleController {
 
 			} // end else
 
-			//---------------------------------------------
-			
-			blueMarble.setEnhanced(enhancedImage.isSelected());
+			// ---------------------------------------------
 
-			// Image value = new Image(BlueMarble.getMostRecentImage());
+			blueMarble.setEnhanced(enhancedImage.isSelected());
 
 			image.setImage(new Image(blueMarble.getImage()));
 
-			//---------------------------------------------
-			
+			// ---------------------------------------------
+
 			ColorAdjust ca = new ColorAdjust();
 
 			if (blackAndWhite.isSelected()) {
