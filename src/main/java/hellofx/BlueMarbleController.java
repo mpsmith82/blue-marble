@@ -44,7 +44,7 @@ public class BlueMarbleController {
 
 			// ---------------------------------------------
 
-			if (datePicker.getValue().getYear() >= 2018 && datePicker.getValue().getMonthValue() >= 6) {
+			if (datePicker.getValue().getYear() >= 2018 && datePicker.getValue().getMonthValue() >= 7) {
 
 				enhancedImage.setDisable(true);
 
