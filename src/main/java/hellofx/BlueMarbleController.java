@@ -44,17 +44,8 @@ public class BlueMarbleController {
 
 			// ---------------------------------------------
 
-			if (datePicker.getValue().getYear() >= 2018 && datePicker.getValue().getMonthValue() >= 7) {
-
-				enhancedImage.setDisable(true);
-
-			} // end if
-
-			else {
-
-				enhancedImage.setDisable(false);
-
-			} // end else
+			enhancedImage
+					.setDisable(datePicker.getValue().getYear() >= 2018 && datePicker.getValue().getMonthValue() >= 7);
 
 			// ---------------------------------------------
 
@@ -66,17 +57,7 @@ public class BlueMarbleController {
 
 			ColorAdjust ca = new ColorAdjust();
 
-			if (blackAndWhite.isSelected()) {
-
-				ca.setSaturation(-1);
-
-			} // end if
-
-			else {
-
-				ca.setSaturation(0.0);
-
-			} // end else
+			ca.setSaturation(blackAndWhite.isSelected() ? -1.0 : 0.0);
 
 			image.setEffect(ca);
 
